@@ -4,6 +4,15 @@ body {
     margin-top: 75px;
 }
 
+ .container
+        {
+            max-width:800px;
+            color:blue;
+            margin:0 auto;
+            padding:50px 30 0px 30px;
+            font-family:sans-serif;
+        }
+
 .center {
     text-align: center;
 }
