@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles={
-    'articleOne':{
+    'article-one':{
         title:"Article one",
         heading:"Article One",
         content:`<p>This is some content of article one is being repated.This is some content of article one is being repated.This is some content of article one is being repated.This is some content of article one is being repated.This is some content of article one is being repated.</p>
@@ -14,13 +14,13 @@ var articles={
                   <p>This is some content of article one is being repated.This is some content of article one is being repated.This is some content of article one is being repated.This is some content of article one is being repated.This is some content of article one is being repated.</p>`
     },
     
-    'articleTwo':{
+    'article-two':{
         title:"Article two - Ramya",
         heading:"Article two",
         content:` <p>This is some content of article two is being repated.This is some content of article two is being repated.This is some content of article two is being repated.This is some content of article two is being repated.This is some content of article two is being repated.</p>`
     },
     
-    'articleThree':{
+    'article-three':{
         title:"Article three -ramya",
         heading:"Article three",
         content:` <p>This is some content of article three is being repated.This is some content of article three is being repated.`
