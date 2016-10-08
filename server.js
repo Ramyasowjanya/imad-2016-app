@@ -13,12 +13,12 @@ app.get('/article-one', function (req, res) {
   res.send('Article one is being requested');
 });
 
-app.get('/article-one', function (req, res) {
-  res.send('Article one is being requested');
+app.get('/article-two', function (req, res) {
+  res.send('Article two is being requested');
 });
 
-app.get('/article-one', function (req, res) {
-  res.send('Article one is being requested');
+app.get('/article-three', function (req, res) {
+  res.send('Article three is being requested');
 });
 
 app.get('/ui/style.css', function (req, res) {
