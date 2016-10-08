@@ -5,12 +5,27 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne={
-    title:"Article one",
-    heading:"Article One",
-    content:`<p>This is some content of article one is being repated.This is some content of article one is being repated.This is some content of article one is being repated.This is some content of article one is being repated.This is some content of article one is being repated.</p>
-              <p>This is some content of article one is being repated.This is some content of article one is being repated.This is some content of article one is being repated.This is some content of article one is being repated.This is some content of article one is being repated.</p>
-              <p>This is some content of article one is being repated.This is some content of article one is being repated.This is some content of article one is being repated.This is some content of article one is being repated.This is some content of article one is being repated.</p>`
+var articles={
+    articleOne:{
+        title:"Article one",
+        heading:"Article One",
+        content:`<p>This is some content of article one is being repated.This is some content of article one is being repated.This is some content of article one is being repated.This is some content of article one is being repated.This is some content of article one is being repated.</p>
+                  <p>This is some content of article one is being repated.This is some content of article one is being repated.This is some content of article one is being repated.This is some content of article one is being repated.This is some content of article one is being repated.</p>
+                  <p>This is some content of article one is being repated.This is some content of article one is being repated.This is some content of article one is being repated.This is some content of article one is being repated.This is some content of article one is being repated.</p>`
+    },
+    
+    articleTwo:{
+        title:"Article two - Ramya",
+        heading:"Article two",
+        content:` <p>This is some content of article two is being repated.This is some content of article two is being repated.This is some content of article two is being repated.This is some content of article two is being repated.This is some content of article two is being repated.</p>`
+    },
+    
+    articleThree:{
+        title:"Article three -ramya",
+        heading:"Article three",
+        content:` <p>This is some content of article three is being repated.This is some content of article three is being repated.`
+    }
+
 }
 function createTemplate(data)
 {
@@ -46,17 +61,10 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function (req, res) {
-  res.send(createTemplate(articleOne));
+app.get('/:articleName', function (req, res) {
+  res.send(createTemplate(articles[articleName]));
 });
 
-app.get('/article-two', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-});
-
-app.get('/article-three', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
-});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
