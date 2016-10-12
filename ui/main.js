@@ -6,5 +6,5 @@ heading.innerHTML="This is new hading";
 var img=document.getElementById("img");
 img.onClick=function()
 {
-    img.style.marginLeft+='15px';
+    img.style.marginLeft='15px';
 };
