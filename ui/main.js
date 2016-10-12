@@ -2,7 +2,7 @@ console.log('Loaded!');
 var heading=document.getElementById("text");
 
 heading.innerHTML="This is new hading";
-int marginleft=0;
+var marginleft=0;
 var img=document.getElementById("madi");
 function moveRight()
 {
