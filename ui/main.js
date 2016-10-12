@@ -6,5 +6,5 @@ heading.innerHTML="This is new hading";
 var img=document.getElementById("madi");
 img.onclick=function()
 {
-    img.style.marginLeft='15px';
+    img.style.marginLeft='35px';
 };
